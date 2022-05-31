@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Maquina De Frases Aleatorias",
   "main": "index.js",
-  "homepage": "https://CursosDesarrollo.github.io/prueba",
+  "homepage": "https://CursosDesarrollo.github.io/FrasesAleatorias",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
