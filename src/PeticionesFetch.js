@@ -9,7 +9,6 @@ const FontGenerator = async (state,DataFetch=null) => {
       DataFetch = DataFetch.data;
     }
     let FontArray = DataFetch.items,DataFont = [];
-    console.log(FontArray);
     do {
       DataFont = FontArray[Math.floor(Math.random()*FontArray.length)];
     } while (!(/latin/gi.test(DataFont.subsets.join(''))));
