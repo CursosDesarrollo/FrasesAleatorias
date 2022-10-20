@@ -9,11 +9,12 @@ const FontGenerator = async (state,DataFetch=null) => {
       DataFetch = DataFetch.data;
     }
     let FontArray = DataFetch.items,DataFont = [];
+    console.log(FontArray);
     do {
       DataFont = FontArray[Math.floor(Math.random()*FontArray.length)];
     } while (!(/latin/gi.test(DataFont.subsets.join(''))));
     let {family,files} = DataFont;
-    DataFont = files.regular;
+    DataFont = "https://"+files.regular.split('http://')[1];
     const NewFont = new FontFace(family, `url(${DataFont})`);
     await NewFont.load();
     document.fonts.add(NewFont);
